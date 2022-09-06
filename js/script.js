@@ -88,7 +88,7 @@ if (document.getElementById('home')) {
 //for about.html
 
 if (document.getElementById('about')) {
-
+/*
     let buttonArr = [...document.getElementsByClassName('input-button')];
 
     let IntroChatArr = [...document.getElementById('intro-chat-group').getElementsByClassName('chat-box')];
@@ -154,6 +154,7 @@ if (document.getElementById('about')) {
     function inputPreviewInit() {
         document.getElementById('input-box').setAttribute('placeholder', 'New Message') //
     }
+*/
 
     document.getElementById('input-box').addEventListener('change', warning);
     document.getElementById('send-message').addEventListener('click', warning);

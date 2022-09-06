@@ -470,7 +470,6 @@ a {
 }
 
 #about #front-content #main-content #chat-window {
-    width: 100%;
     -ms-overflow-style: none;
     /* IE and Edge */
     scrollbar-width: none;
