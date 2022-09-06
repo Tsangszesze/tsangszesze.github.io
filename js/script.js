@@ -89,7 +89,6 @@ if (document.getElementById('home')) {
 
 if (document.getElementById('about')) {
 
-
     let buttonArr = [...document.getElementsByClassName('input-button')];
 
     let IntroChatArr = [...document.getElementById('intro-chat-group').getElementsByClassName('chat-box')];

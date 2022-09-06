@@ -457,7 +457,8 @@ a {
     width: 100%;
     padding: 10px 0;
     height: 75%;
-    overflow: scroll;
+    overflow-x: hidden;
+    overflow-y: scroll;
     display: flex;
     flex-direction: column;
     /*background-color: yellow;*/
@@ -469,6 +470,7 @@ a {
 }
 
 #about #front-content #main-content #chat-window {
+    width: 100%;
     -ms-overflow-style: none;
     /* IE and Edge */
     scrollbar-width: none;
@@ -497,10 +499,12 @@ a {
 
 #about #front-content #main-content .chat-block.left {
     align-items: flex-start;
+    float: left;
 }
 
 #about #front-content #main-content .chat-block.right {
     align-items: flex-end;
+    float: right;
 }
 
 #about #front-content #main-content .chat-box {
