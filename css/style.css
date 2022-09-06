@@ -261,7 +261,7 @@ a {
     }
 
     #home #main-content #icon {
-        width: fit-content;
+        width: auto;
         height: 50vh;
         z-index: -2;
     }
