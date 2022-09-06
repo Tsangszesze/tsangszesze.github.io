@@ -39,11 +39,16 @@ if (document.getElementById('home')) {
 
     document.addEventListener('DOMContentLoaded', timeOut);
     let taglineTimeout;
+    let nicknameTimeout;
     function timeOut(){
-        taglineTimeout = setTimeout(fadeLeft, 1600);
+        taglineTimeout = setTimeout(taglineFadeLeft, 1600);
+        nicknameTimeout = setTimeout(nicknameFadeLeft, 1000);
     }
-    function fadeLeft(){
+    function taglineFadeLeft(){
         document.getElementById('intro').style.visibility = 'visible';
+    }
+    function nicknameFadeLeft(){
+        document.getElementById('nickname').style.visibility = 'visible';
     }
 
     document.addEventListener('DOMContentLoaded', scrollDelayAppear);
