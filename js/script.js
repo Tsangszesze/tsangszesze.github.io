@@ -88,9 +88,9 @@ if (document.getElementById('home')) {
 //for about.html
 
 if (document.getElementById('about')) {
-/*
-    let buttonArr = [...document.getElementsByClassName('input-button')];
 
+    let buttonArr = [...document.getElementsByClassName('input-button')];
+/*
     let IntroChatArr = [...document.getElementById('intro-chat-group').getElementsByClassName('chat-box')];
     let ResumeChatArr = [...document.getElementById('resume-chat-group').getElementsByClassName('chat-box')];
     let ProjectChatArr = [...document.getElementById('project-chat-group').getElementsByClassName('chat-box')];
@@ -140,6 +140,7 @@ if (document.getElementById('about')) {
                 break;
         }
     }
+*/
 
     //since it almost only take 0.1 s to loop from i =0 to i<IntroChatArr.length
     //so there is basically no time interval between two loops
@@ -154,7 +155,6 @@ if (document.getElementById('about')) {
     function inputPreviewInit() {
         document.getElementById('input-box').setAttribute('placeholder', 'New Message') //
     }
-*/
 
     document.getElementById('input-box').addEventListener('change', warning);
     document.getElementById('send-message').addEventListener('click', warning);

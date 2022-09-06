@@ -584,6 +584,12 @@ a {
     flex-direction: row;
     align-items: center;
     gap: 10px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+#about #front-content #main-content #input-choice::-webkit-scrollbar {
+    display: none;
 }
 
 #about #front-content #main-content #input-choice button {
@@ -592,6 +598,7 @@ a {
     font-family: var(--style-font);
     background-color: var(--color9);
     border-radius: 5px;
+    color: inherit;
 }
 
 #about #front-content #main-content #input-choice button:hover {
@@ -843,6 +850,7 @@ a {
     text-align: left;
     font-family: inherit;
     font-size: inherit;
+    color: inherit;
 }
 
 @media(max-width: 1300px) {
