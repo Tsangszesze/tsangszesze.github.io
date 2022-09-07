@@ -1,5 +1,14 @@
 //Genarl Interaction
 
+function setDocHeight() {
+    document.documentElement.style.setProperty('--vh', `${window.innerHeight / 100}px`);
+};
+window.addEventListener('resize',
+    setDocHeight);
+window.addEventListener('orientationchange',
+    setDocHeight);
+setDocHeight();
+
 document.getElementById('menu-button').addEventListener('click', expandMenu);
 function expandMenu() {
     var menu = document.getElementById('menu-content');
@@ -23,7 +32,6 @@ function expandMenu() {
         }
     }
 }
-
 
 let smallscreen = window.matchMedia('(max-width: 1255px)');
 let largescreen = window.matchMedia('(min-width: 1255px)');
@@ -91,8 +99,9 @@ if (document.getElementById('about')) {
 
     let buttonArr = [...document.getElementsByClassName('input-button')];
 
-    //pop-up animation for intro chat-group
+    //pop-up animation
     let IntroChatArr = [...document.getElementById('intro-chat-group').getElementsByClassName('chat-box')];
+    let popUpTimeOutIntro;
     for (let i = 0; i < IntroChatArr.length; i++) {
         popUpTimeOut = setTimeout(popUp, 100 * i);
         function popUp() {
@@ -104,8 +113,8 @@ if (document.getElementById('about')) {
     let ProjectChatArr = [...document.getElementById('project-chat-group').getElementsByClassName('chat-box')];
     let ContactChatArr = [...document.getElementById('contact-chat-group').getElementsByClassName('chat-box')];
 
-    let popUpTimeOutIntro;
     let popUpTimeOutOthers;
+
 
     function QA(arr) {
         for (let i = 0; i < arr.length; i++) {
