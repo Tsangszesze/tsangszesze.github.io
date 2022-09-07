@@ -108,7 +108,6 @@ if (document.getElementById('about')) {
             IntroChatArr[i].style.display = 'block';
         };
     }
-    /*
     //2.pop-up animation - other parts
         let ResumeChatArr = [...document.getElementById('resume-chat-group').getElementsByClassName('chat-box')];
         let ProjectChatArr = [...document.getElementById('project-chat-group').getElementsByClassName('chat-box')];
@@ -150,7 +149,6 @@ if (document.getElementById('about')) {
         function scroll() {
             document.getElementById('chat-window').scrollTop = document.getElementById('chat-window').scrollHeight;
         }
-    */
 
     //since it almost only take 0.1 s to loop from i =0 to i<IntroChatArr.length
     //so there is basically no time interval between two loops

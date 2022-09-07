@@ -1,4 +1,6 @@
 /* general styles */
+html, body { height: 100% }
+
 :root {
     --style-font: Chakra Petch, Gill Sans;
     --regular-font: Gill Sans;
@@ -127,7 +129,7 @@ a {
 
 #home {
     width: 100vw;
-    height: 100vh;
+    height: 100%;
     overflow: hidden;
     font-family: var(--regular-font);
 }
@@ -401,7 +403,7 @@ a {
 
 #about {
     width: 100vw;
-    height: 100vh;
+    height: 100%;
     overflow: hidden;
     font-family: var(--regular-font);
     background-color: #BDE038;
@@ -767,7 +769,7 @@ a {
 
 #contact {
     width: 100vw;
-    height: 100vh;
+    height: 100%;
     overflow: hidden;
     font-family: var(--regular-font);
     background-color: #BDE038;
@@ -986,7 +988,7 @@ a {
 
 #work {
     width: 100vw;
-    height: 100vh;
+    height: 100%;
     overflow: hidden;
     font-family: var(--regular-font);
 }
