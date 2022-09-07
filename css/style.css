@@ -462,7 +462,6 @@ a {
     overflow-y: scroll;
     display: flex;
     flex-direction: column;
-    /*background-color: yellow;*/
 }
 
 /* Hide scrollbar for Chrome, Safari and Opera */
@@ -485,12 +484,11 @@ a {
 #about #front-content #main-content #chat-window .link-in-chat:hover {
     text-shadow: 1px 1px 1px var(--color10);
 }
-
+/*
 #about #front-content #main-content #chat-window .chat-group {
     display: none;
-    display: block;
 }
-
+*/
 #about #front-content #main-content .chat-block {
     width: 100%;
     display: block;
@@ -667,12 +665,6 @@ a {
         width: 800px;
     }
 
-    #about #front-content #main-content #input-choice {
-        display: flex;
-        align-items: center;
-        gap: 5px;
-    }
-
     #about #front-content #main-content #input-choice button {
         font-size: 100%;
     }
@@ -706,7 +698,7 @@ a {
         width: 100%;
         box-shadow: none;
     }
-
+    
     #about #front-content #main-content #input-window {
         padding-top: 12px;
         gap: 8px;
@@ -724,6 +716,8 @@ a {
     #about #front-content #main-content #input-choice {
         flex-direction: column;
         gap: 2px;
+        display: flex;
+        align-items: center;
     }
 
     #about #front-content #main-content #input-choice button {
@@ -763,7 +757,23 @@ a {
         }
     }
 }
-
+/*
+@media (max-width:481px) {
+    #about #front-content #main-content #chat-window {
+        height: 100%;
+    }
+    #about #front-content #main-content #input-window {
+        display: none;
+    }
+    #about #front-content #main-content #chat-window .chat-group {
+        display: none;
+        display: block;
+    }
+    #about #front-content #main-content .chat-box {
+        display: none;
+    }
+}
+*/
 /* contact.html */
 
 
