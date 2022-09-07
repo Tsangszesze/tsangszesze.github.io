@@ -1,4 +1,5 @@
 /* general styles */
+html, body { height: 100% }
 
 :root {
     --style-font: Chakra Petch, Gill Sans;
