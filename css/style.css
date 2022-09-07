@@ -1,5 +1,11 @@
 /* general styles */
-html, body { height: 100% }
+body {
+    min-height: 100vh;
+    min-height: -webkit-fill-available;
+  }
+  html {
+    height: -webkit-fill-available;
+  }
 
 :root {
     --style-font: Chakra Petch, Gill Sans;
@@ -487,8 +493,7 @@ a {
 }
 
 #about #front-content #main-content #chat-window .chat-group {
-    /*display: none;*/
-    display: block;
+    display: none;
 }
 
 #about #front-content #main-content .chat-block {

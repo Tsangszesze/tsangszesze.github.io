@@ -90,24 +90,26 @@ if (document.getElementById('home')) {
 if (document.getElementById('about')) {
 
     let buttonArr = [...document.getElementsByClassName('input-button')];
-/*
+
+    //pop-up animation for intro chat-group
     let IntroChatArr = [...document.getElementById('intro-chat-group').getElementsByClassName('chat-box')];
-    let ResumeChatArr = [...document.getElementById('resume-chat-group').getElementsByClassName('chat-box')];
-    let ProjectChatArr = [...document.getElementById('project-chat-group').getElementsByClassName('chat-box')];
-    let ContactChatArr = [...document.getElementById('contact-chat-group').getElementsByClassName('chat-box')];
-
-    let popUpTimeOut;
-
     for (let i = 0; i < IntroChatArr.length; i++) {
         popUpTimeOut = setTimeout(popUp, 100 * i);
         function popUp() {
             IntroChatArr[i].style.display = 'block';
         };
     }
+/*
+    let ResumeChatArr = [...document.getElementById('resume-chat-group').getElementsByClassName('chat-box')];
+    let ProjectChatArr = [...document.getElementById('project-chat-group').getElementsByClassName('chat-box')];
+    let ContactChatArr = [...document.getElementById('contact-chat-group').getElementsByClassName('chat-box')];
+
+    let popUpTimeOutIntro;
+    let popUpTimeOutOthers;
 
     function QA(arr) {
         for (let i = 0; i < arr.length; i++) {
-            popUpTimeOut = setTimeout(popUp, 500 * i);
+            popUpTimeOutOthers = setTimeout(popUp, 500 * i);
             function popUp() {
                 arr[i].style.display = 'block';
             };
@@ -146,16 +148,17 @@ if (document.getElementById('about')) {
     //so there is basically no time interval between two loops
     //the value of settimeout is exaclty the delaytime of each i-th element
 
+    //for placeholder preview - using input button array
     buttonArr.forEach(a => { a.addEventListener('mouseover', inputPreview) });
     function inputPreview() {
         document.getElementById('input-box').setAttribute('placeholder', document.getElementsByClassName('default-input')[buttonArr.indexOf(this)].innerText) //
     }
-
     buttonArr.forEach(a => { a.addEventListener('mouseout', inputPreviewInit) });
     function inputPreviewInit() {
         document.getElementById('input-box').setAttribute('placeholder', 'New Message') //
     }
 
+    //for warning popup
     document.getElementById('input-box').addEventListener('change', warning);
     document.getElementById('send-message').addEventListener('click', warning);
 
