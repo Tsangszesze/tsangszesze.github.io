@@ -484,11 +484,7 @@ a {
 #about #front-content #main-content #chat-window .link-in-chat:hover {
     text-shadow: 1px 1px 1px var(--color10);
 }
-/*
-#about #front-content #main-content #chat-window .chat-group {
-    display: none;
-}
-*/
+
 #about #front-content #main-content .chat-block {
     width: 100%;
     display: block;
@@ -757,7 +753,7 @@ a {
         }
     }
 }
-/*
+
 @media (max-width:481px) {
     #about #front-content #main-content #chat-window {
         height: 100%;
@@ -765,15 +761,12 @@ a {
     #about #front-content #main-content #input-window {
         display: none;
     }
-    #about #front-content #main-content #chat-window .chat-group {
-        display: none;
+    #about #front-content #main-content #resume-chat-group .left #resume {
         display: block;
     }
-    #about #front-content #main-content .chat-box {
-        display: none;
-    }
+    
 }
-*/
+
 /* contact.html */
 
 
