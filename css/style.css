@@ -972,6 +972,11 @@ a {
     animation: warnIn2 0.2s;
 }
 
+@media (max-width:481px) {
+    #contact #contact-block {
+        margin: 100px auto 0;
+    }
+}
 
 @-webkit-keyframes warnIn2 {
     from {
@@ -1250,7 +1255,7 @@ a {
 }
 @media (max-width:481px) {
     #work #front-content #main-content {
-        padding-top: 3vh;
+        padding-top: 2vh;
         gap: 20px;
     }
 }
