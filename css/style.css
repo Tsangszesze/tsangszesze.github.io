@@ -390,6 +390,24 @@ a {
         }
     }
 }
+@media (max-width:481px) {
+    #home #main-content #snap-container {
+        gap: 15px;
+    }
+    #home #main-content #text-block #description {
+        gap: 5px;
+    }
+    #home #main-content #snap-container {
+        margin-top: 20px;
+    }
+    #home #main-content #tagline {
+        line-height: 1.2;
+    }
+    #home #scroll-text {
+        color: var(--color1);
+        text-shadow: 1px 1px 1px var(--color0);
+    }
+}
 
 /* about.html */
 
