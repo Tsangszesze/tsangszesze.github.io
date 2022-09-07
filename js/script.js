@@ -48,14 +48,14 @@ if (document.getElementById('home')) {
     document.addEventListener('DOMContentLoaded', timeOut);
     let taglineTimeout;
     let nicknameTimeout;
-    function timeOut(){
+    function timeOut() {
         taglineTimeout = setTimeout(taglineFadeLeft, 1600);
         nicknameTimeout = setTimeout(nicknameFadeLeft, 1000);
     }
-    function taglineFadeLeft(){
+    function taglineFadeLeft() {
         document.getElementById('intro').style.visibility = 'visible';
     }
-    function nicknameFadeLeft(){
+    function nicknameFadeLeft() {
         document.getElementById('nickname').style.visibility = 'visible';
     }
 
@@ -68,7 +68,7 @@ if (document.getElementById('home')) {
             scrollTimeOut = setTimeout(scrollAppear, 2300)
         }
     };
-    
+
 
     function scrollAppear() {
         document.getElementById('scroll-indicator').style.display = 'flex';
@@ -99,65 +99,64 @@ if (document.getElementById('about')) {
 
     let buttonArr = [...document.getElementsByClassName('input-button')];
 
-    //pop-up animation
+    //pop-up animation - intro part
     let IntroChatArr = [...document.getElementById('intro-chat-group').getElementsByClassName('chat-box')];
     let popUpTimeOutIntro;
     for (let i = 0; i < IntroChatArr.length; i++) {
-        popUpTimeOut = setTimeout(popUp, 100 * i);
+        popUpTimeOutIntro = setTimeout(popUp, 100 * i);
         function popUp() {
             IntroChatArr[i].style.display = 'block';
         };
     }
-/*
-    let ResumeChatArr = [...document.getElementById('resume-chat-group').getElementsByClassName('chat-box')];
-    let ProjectChatArr = [...document.getElementById('project-chat-group').getElementsByClassName('chat-box')];
-    let ContactChatArr = [...document.getElementById('contact-chat-group').getElementsByClassName('chat-box')];
-
-    let popUpTimeOutOthers;
-
-
-    function QA(arr) {
-        for (let i = 0; i < arr.length; i++) {
-            popUpTimeOutOthers = setTimeout(popUp, 500 * i);
-            function popUp() {
-                arr[i].style.display = 'block';
+    /*
+    //2.pop-up animation - other parts
+        let ResumeChatArr = [...document.getElementById('resume-chat-group').getElementsByClassName('chat-box')];
+        let ProjectChatArr = [...document.getElementById('project-chat-group').getElementsByClassName('chat-box')];
+        let ContactChatArr = [...document.getElementById('contact-chat-group').getElementsByClassName('chat-box')];
+        let popUpTimeOutOthers;
+        //2a.general pop-up function
+        function QA(arr) {
+            for (let i = 0; i < arr.length; i++) {
+                popUpTimeOutOthers = setTimeout(popUp, 500 * i);
+                function popUp() {
+                    arr[i].style.display = 'block';
+                };
             };
-        };
-    }
-
-    let ChatArr = [...document.getElementsByClassName('chat-box')];
-    ChatArr.forEach(a => { a.addEventListener('animationend', scroll) });
-    function scroll() {
-        document.getElementById('chat-window').scrollTop = document.getElementById('chat-window').scrollHeight;
-    }
-
-    let count = 0;
-    buttonArr.forEach(a => { a.addEventListener('click', send) });
-    function send() {
-        count += 1;
-        document.getElementsByClassName('chat-group')[buttonArr.indexOf(this)].style.order = count;
-        document.getElementsByClassName('chat-group')[buttonArr.indexOf(this)].style.display = 'block';
-        switch (buttonArr.indexOf(this)) {
-            case 0:
-                QA(ResumeChatArr);
-                break;
-            case 1:
-                QA(ProjectChatArr);
-                break;
-            case 2:
-                QA(ContactChatArr);
-                break;
-            default:
-                break;
         }
-    }
-*/
+        //2b.trigger pop-up animation
+        let count = 0;
+        buttonArr.forEach(a => { a.addEventListener('click', send) });
+        function send() {
+            count += 1;
+            document.getElementsByClassName('chat-group')[buttonArr.indexOf(this)].style.order = count;
+            document.getElementsByClassName('chat-group')[buttonArr.indexOf(this)].style.display = 'block';
+            switch (buttonArr.indexOf(this)) {
+                case 0:
+                    QA(ResumeChatArr);
+                    break;
+                case 1:
+                    QA(ProjectChatArr);
+                    break;
+                case 2:
+                    QA(ContactChatArr);
+                    break;
+                default:
+                    break;
+            }
+        }
+    //3. As chat-box pops up, page scroll
+        let ChatArr = [...document.getElementsByClassName('chat-box')];
+        ChatArr.forEach(a => { a.addEventListener('animationend', scroll) });
+        function scroll() {
+            document.getElementById('chat-window').scrollTop = document.getElementById('chat-window').scrollHeight;
+        }
+    */
 
     //since it almost only take 0.1 s to loop from i =0 to i<IntroChatArr.length
     //so there is basically no time interval between two loops
     //the value of settimeout is exaclty the delaytime of each i-th element
 
-    //for placeholder preview - using input button array
+    //4.for placeholder preview - using input button array
     buttonArr.forEach(a => { a.addEventListener('mouseover', inputPreview) });
     function inputPreview() {
         document.getElementById('input-box').setAttribute('placeholder', document.getElementsByClassName('default-input')[buttonArr.indexOf(this)].innerText) //
@@ -167,7 +166,7 @@ if (document.getElementById('about')) {
         document.getElementById('input-box').setAttribute('placeholder', 'New Message') //
     }
 
-    //for warning popup
+    //5.for warning popup
     document.getElementById('input-box').addEventListener('change', warning);
     document.getElementById('send-message').addEventListener('click', warning);
 
@@ -210,20 +209,20 @@ if (document.getElementById('work')) {
 //for contact.html
 
 if (document.getElementById('contact')) {
-document.getElementById('email').addEventListener('click',copyEmail)
-function copyEmail(){
-    console.log('a');
-    navigator.clipboard.writeText('tsangszesze@icloud.com');
-    warning();
-}
-function warning() {
-    var x = document.getElementById('warning-bar');
-    if (x.className == 'nowarning') {
-        x.classList.replace('nowarning', 'warning');
-        console.log(x.className);
-        setTimeout(function () { x.classList.replace('warning', 'nowarning'); console.log(x.className) }, 2500);
+    document.getElementById('email').addEventListener('click', copyEmail)
+    function copyEmail() {
+        console.log('a');
+        navigator.clipboard.writeText('tsangszesze@icloud.com');
+        warning();
     }
-}
+    function warning() {
+        var x = document.getElementById('warning-bar');
+        if (x.className == 'nowarning') {
+            x.classList.replace('nowarning', 'warning');
+            console.log(x.className);
+            setTimeout(function () { x.classList.replace('warning', 'nowarning'); console.log(x.className) }, 2500);
+        }
+    }
 }
 
 
