@@ -1248,3 +1248,9 @@ a {
         }
     }
 }
+@media (max-width:481px) {
+    #work #front-content #main-content {
+        padding-top: 3vh;
+        gap: 20px;
+    }
+}
