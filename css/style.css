@@ -761,13 +761,10 @@ a {
     #about #front-content #main-content #input-window {
         display: none;
     }
-    #about #front-content #main-content #intro-chat-group .chat-box{
+    #about #front-content #main-content #intro-chat-group .chat-box:not(#question){
         display: block;
     }
     #about #front-content #main-content #resume-chat-group .left #resume {
-        display: block;
-    }
-    #about #front-content #main-content #contact-chat-group .left .chat-box{
         display: block;
     }
 }
