@@ -223,3 +223,5 @@ if (document.getElementById('contact')) {
     }
 }
 */
+
+AOS.init();
