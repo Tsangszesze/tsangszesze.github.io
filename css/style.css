@@ -880,14 +880,14 @@ a {
 #contact .contact-info:hover {
     border-bottom: 2px solid var(--color10);
 }
-
+/*
 #contact #email {
     text-align: left;
     font-family: inherit;
     font-size: inherit;
     color: inherit;
 }
-
+*/
 @media(max-width: 1300px) {
     #contact #white-block {
         top: 18vw;
@@ -930,11 +930,11 @@ a {
     #contact #contact-info {
         gap: 10px;
     }
-
+/*
     #contact .contact-info:not(#emailaddress) {
         text-decoration: bold;
     }
-
+*/
     #contact #contact-block #drawing-line {
         position: absolute;
         top: 100px;
@@ -944,7 +944,7 @@ a {
     }
 
 }
-
+/*
 #contact #warning-bar {
     color: var(--color0);
     text-align: center;
@@ -971,7 +971,7 @@ a {
     -webkit-animation: warnIn 0.2s;
     animation: warnIn2 0.2s;
 }
-
+*/
 @media (max-width:481px) {
     #contact #contact-block {
         margin: 125px auto 0;

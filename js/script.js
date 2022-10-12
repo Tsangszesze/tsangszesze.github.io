@@ -205,7 +205,7 @@ if (document.getElementById('work')) {
 }
 
 //for contact.html
-
+/*
 if (document.getElementById('contact')) {
     document.getElementById('email').addEventListener('click', copyEmail)
     function copyEmail() {
@@ -222,6 +222,4 @@ if (document.getElementById('contact')) {
         }
     }
 }
-
-
-AOS.init();
+*/
