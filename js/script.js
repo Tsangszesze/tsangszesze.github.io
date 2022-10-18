@@ -170,11 +170,11 @@ if (document.getElementById('about')) {
 
     function warning() {
         var x = document.getElementById('warning-bar');
-        console.log(x.className);
+        //console.log(x.className);
         //document.getElementById('warning-bar').style.display ='block';
         if (x.className == 'nowarning') {
             x.classList.replace('nowarning', 'warning');
-            console.log(x.className);
+            //console.log(x.className);
             setTimeout(function () { x.classList.replace('warning', 'nowarning'); console.log(x.className) }, 2500);
         }
     }
@@ -192,13 +192,13 @@ if (document.getElementById('work')) {
     function infoDisplay() {
         if (middlescreen.matches) {
             document.getElementsByClassName('project-info')[projectArr.indexOf(this)].style.display = 'block';
-            console.log(document.getElementById('title'));
+            //console.log(document.getElementById('title'));
             document.getElementById('title').style.display = 'none'
         }
 
     }
     function infoHide() {
-        console.log('a');
+        //console.log('a');
         document.getElementsByClassName('project-info')[projectArr.indexOf(this)].style.display = 'none';
         document.getElementById('title').style.display = 'block'
     }
