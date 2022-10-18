@@ -175,7 +175,7 @@ if (document.getElementById('about')) {
         if (x.className == 'nowarning') {
             x.classList.replace('nowarning', 'warning');
             //console.log(x.className);
-            setTimeout(function () { x.classList.replace('warning', 'nowarning'); console.log(x.className) }, 2500);
+            setTimeout(function () { x.classList.replace('warning', 'nowarning'); /*console.log(x.className)*/ }, 2500);
         }
     }
 
